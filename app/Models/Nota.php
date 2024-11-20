@@ -11,6 +11,9 @@ class Nota extends Model
 
     protected $fillable = ['actividad', 'nota', 'codEstudiante'];
 
+    public $timestamps = false;
+
+
     public function estudiante()
     {
         return $this->belongsTo(Estudiante::class, 'codEstudiante');
